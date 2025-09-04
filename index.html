@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Catálogo de Câmeras Antigas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h2>Cadastro de Câmeras Antigas</h2>
+
+  <form id="formCamera" enctype="multipart/form-data" onsubmit="return false;">
+    <label for="marca">Marca:</label>
+    <input type="text" id="marca" placeholder="Ex: Canon" required />
+
+    <label for="modelo">Modelo:</label>
+    <input type="text" id="modelo" placeholder="Ex: AE-1" required />
+
+    <label for="ano">Ano de fabricação:</label>
+    <input type="number" id="ano" placeholder="Ex: 1978" required />
+
+    <label for="pais">País de origem:</label>
+    <input type="text" id="pais" placeholder="Ex: Japão" required />
+
+    <label for="raridade">Raridade:</label>
+    <input type="text" id="raridade" placeholder="Ex: Comum, Rara, Muito rara" required />
+
+    <label for="valor">Valor estimado (R$):</label>
+    <input type="number" id="valor" step="0.01" placeholder="Ex: 450.00" required />
+
+    <label for="numero">Número de identificação:</label>
+    <input type="text" id="numero" placeholder="Ex: 001" required />
+
+    <label for="imagemFile">Selecione a foto da câmera:</label>
+    <input type="file" id="imagemFile" accept="image/*" />
+
+    <button type="button" onclick="salvarCamera()">Salvar</button>
+
+  </form>
+
+  <h3>Minhas Câmeras</h3>
+  <div id="lista"></div>
+
+  <script src="script.js"></script>
+
+  <button onclick="exportarCSV()">Exportar para word</button>
+</body>
+</html>
